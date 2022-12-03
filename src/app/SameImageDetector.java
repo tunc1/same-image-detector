@@ -40,7 +40,7 @@ public class SameImageDetector
         List<SameImage> sameImages=new LinkedList<>();
         File directory1=new File(directoryPath);
         List<File> images=new ArrayList<>();
-        Stream.of(directory1.listFiles()).filter(file->file.isFile()).forEach(images::add);
+        Stream.of(directory1.listFiles()).filter(File::isFile).forEach(images::add);
         for(int i=0;i<images.size();i++)
         {
             File file1=images.get(i);
